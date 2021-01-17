@@ -3,7 +3,7 @@ pipeline {
     
     
     environment {
-        PATH = "/maven/bin:$PATH"
+        PATH = "/root/mvn_jenkins/github-maven-example/example:$PATH"
     }
     
     stages {
@@ -18,11 +18,7 @@ pipeline {
         {
             steps {
                 
-                sh """
-                 "sudo cd /root/mvn_jenkins/github-maven-example/example"
-                 "mvn clean package"
-                
-                """
+                sh "mvn clean package"
             }
         }
     }
