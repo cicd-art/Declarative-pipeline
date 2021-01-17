@@ -1,9 +1,8 @@
 pipeline {
     agent any
     
-    
-    environment {
-        PATH = "/root/mvn_jenkins/github-maven-example/example:$PATH"
+      environment {
+        PATH = "/maven/bin:$PATH"
     }
     
     stages {
@@ -17,8 +16,12 @@ pipeline {
         stage ("maven build")
         {
             steps {
+            sh """
+                     cd /root/mvn_jenkins/github-maven-example/example
+                     mvn clean package
+            
+            """
                 
-                sh "mvn clean package"
             }
         }
     }
