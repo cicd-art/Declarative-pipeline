@@ -7,5 +7,12 @@ pipeline {
                 git 'https://github.com/Sachiniraveni/Sachiniraveni.git'
             }
         }
+
+        stage ("maven build")
+        {
+            steps {
+                sh "mvn clean package"
+            }
+        }
     }
 }
