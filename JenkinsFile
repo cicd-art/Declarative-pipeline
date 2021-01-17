@@ -11,8 +11,8 @@ pipeline {
         stage ("maven build")
         {
             steps {
-                sh "cd /root/mvn_jenkins/github-maven-example/example"
-                sh "mvn clean package"
+                sh "sudo cd /root/mvn_jenkins/github-maven-example/example"
+                sh "sudo mvn clean package"
             }
         }
     }
