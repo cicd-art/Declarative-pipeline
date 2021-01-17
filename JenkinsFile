@@ -17,7 +17,7 @@ pipeline {
         {
             steps {
             sh """
-                     cd /root/mvn_jenkins/github-maven-example/example
+                     sudo cd /root/mvn_jenkins/github-maven-example/example
                      mvn clean package
             
             """
